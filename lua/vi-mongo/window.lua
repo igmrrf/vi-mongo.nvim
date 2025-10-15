@@ -55,7 +55,6 @@ local function create_vi_mongo_window()
 
     api.nvim_set_option_value("winblend", 0, { win = win })
 
-    print(M.config.persist)
     vim.bo[buf].bufhidden = M.config.persist and "hide" or "wipe"
 
     api.nvim_create_autocmd("TermClose", {
